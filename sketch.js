@@ -94,8 +94,12 @@ function mouseReleased(){
 
 function keyPressed(){
     if(keyCode === 32){
+    bird.trajectory = [];
+    Matter.Body.setPosition(bird.body,{x:200,y:50});
+    Matter.Body.setAngle(bird.body,0);
        slingshot.attach(bird.body);
     }
+
 }
 
 async function getBackgroundImg(){
